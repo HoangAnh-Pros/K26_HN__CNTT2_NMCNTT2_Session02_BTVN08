@@ -1,0 +1,11 @@
+Phần 1: Phân tích vấn đề
+
+Dùng đường dẫn tuyệt đối cục bộ: Đường dẫn C:\Users\Admin\... trỏ trực tiếp đến thư mục trên máy tính cá nhân. Khi đưa lên server, máy chủ và trình duyệt của người dùng không thể truy cập vào ổ đĩa C: của máy bạn nên không tìm thấy ảnh.
+
+Sai biệt chữ hoa/thường ở đuôi file: Các hệ điều hành máy chủ (như Linux) phân biệt rõ chữ hoa và chữ thường. Mã HTML gọi đuôi .JPG (chữ hoa) nhưng file thực tế lưu là .jpg (chữ thường) nên máy chủ hiểu là hai file khác nhau và báo lỗi.
+
+Phần 2: Hoàn thiện bài
+
+Đoạn mã viết lại với đường dẫn tương đối chuẩn:
+
+<img src="images/poster.jpg" alt="Poster phim CineBook">
